@@ -1,0 +1,13 @@
+{
+  "name": "chenzhtbb/rpc",
+  "type": "library",
+  "license": "MIT",
+  "description": "Webman plugin chenzhtbb/rpc",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Chenzhtbb\\Rpc\\": "src"
+    }
+  }
+}
