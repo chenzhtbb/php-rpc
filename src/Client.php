@@ -45,9 +45,7 @@ class Client
 
   protected function send(string $method, array $args)
   {
-    if (is_null($this->connection)) {
-      $this->open();
-    }
+    $this->open();
     $data = json_encode([
       'class'  => $this->serviceName,
       'method' => $method,
@@ -65,6 +63,7 @@ class Client
     if (!$retval) {
       throw new \Exception("recv data failed");
     }
+    $this->close();
     return json_decode($retval, true);
   }
 
